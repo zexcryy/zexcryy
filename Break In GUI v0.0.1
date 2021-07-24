@@ -1,0 +1,695 @@
+-- Gui made and scripted by zexcryy#0493
+-- GUI to LUA plugin helped with scripting..
+
+
+local ScreenGui = Instance.new("ScreenGui")
+local teleportsTab = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local teleportsMain = Instance.new("Frame")
+local blueRoom = Instance.new("TextButton")
+local greenRoom = Instance.new("TextButton")
+local mainRoom = Instance.new("TextButton")
+local pinkRoom = Instance.new("TextButton")
+local basement = Instance.new("TextButton")
+local attic = Instance.new("TextButton")
+local sewer = Instance.new("TextButton")
+local openTP = Instance.new("TextButton")
+local creditsTab = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local creditsMain = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local openCredits = Instance.new("TextButton")
+local localPlayerTab = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local localPlayerMain = Instance.new("Frame")
+local submitWalkSpeed = Instance.new("TextButton")
+local submitJumpPower = Instance.new("TextButton")
+local infJump = Instance.new("TextButton")
+local btools = Instance.new("TextButton")
+local enterWalkSpeed = Instance.new("TextBox")
+local enterJumpPower = Instance.new("TextBox")
+local openLP = Instance.new("TextButton")
+local itemsTab = Instance.new("Frame")
+local TextLabel_6 = Instance.new("TextLabel")
+local itemsMain = Instance.new("Frame")
+local apple = Instance.new("TextButton")
+local pizza = Instance.new("TextButton")
+local bloxyCola = Instance.new("TextButton")
+local cookie = Instance.new("TextButton")
+local openItems = Instance.new("TextButton")
+local functionsTab = Instance.new("Frame")
+local TextLabel_7 = Instance.new("TextLabel")
+local functionsMain = Instance.new("Frame")
+local unlockBasement = Instance.new("TextButton")
+local basementLights = Instance.new("TextButton")
+local friendCat = Instance.new("TextButton")
+local openFunctions = Instance.new("TextButton")
+local tp = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+teleportsTab.Active = true
+teleportsTab.Draggable = true
+creditsTab.Active = true
+creditsTab.Draggable = true
+localPlayerTab.Active = true
+localPlayerTab.Draggable = true
+itemsTab.Active = true
+itemsTab.Draggable = true
+functionsTab.Active = true
+functionsTab.Draggable = true
+
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+teleportsTab.Name = "teleportsTab"
+teleportsTab.Parent = ScreenGui
+teleportsTab.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+teleportsTab.BorderColor3 = Color3.fromRGB(0, 255, 0)
+teleportsTab.BorderSizePixel = 2
+teleportsTab.Position = UDim2.new(0.575757563, 0, 0.0346740633, 0)
+teleportsTab.Size = UDim2.new(0, 150, 0, 25)
+
+TextLabel.Parent = teleportsTab
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 150, 0, 25)
+TextLabel.Font = Enum.Font.PermanentMarker
+TextLabel.Text = "Teleports"
+TextLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+teleportsMain.Name = "teleportsMain"
+teleportsMain.Parent = teleportsTab
+teleportsMain.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+teleportsMain.BackgroundTransparency = 0.100
+teleportsMain.BorderColor3 = Color3.fromRGB(0, 255, 0)
+teleportsMain.BorderSizePixel = 2
+teleportsMain.Position = UDim2.new(0, 0, 1, 0)
+teleportsMain.Size = UDim2.new(0, 150, 0, 265)
+teleportsMain.Visible = false
+
+blueRoom.Name = "blueRoom"
+blueRoom.Parent = teleportsMain
+blueRoom.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+blueRoom.BorderColor3 = Color3.fromRGB(0, 255, 0)
+blueRoom.Position = UDim2.new(0, 0, 0.228534117, 0)
+blueRoom.Size = UDim2.new(0, 150, 0, 25)
+blueRoom.Font = Enum.Font.PermanentMarker
+blueRoom.Text = "Blue Room"
+blueRoom.TextColor3 = Color3.fromRGB(0, 255, 0)
+blueRoom.TextScaled = true
+blueRoom.TextSize = 14.000
+blueRoom.TextWrapped = true
+blueRoom.MouseButton1Click:Connect(function()
+	tp.CFrame = CFrame.new(-48.0383, 16.87, -205.104)
+end)
+
+greenRoom.Name = "greenRoom"
+greenRoom.Parent = teleportsMain
+greenRoom.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+greenRoom.BorderColor3 = Color3.fromRGB(0, 255, 0)
+greenRoom.Position = UDim2.new(0, 0, 0.358679235, 0)
+greenRoom.Size = UDim2.new(0, 150, 0, 25)
+greenRoom.Font = Enum.Font.PermanentMarker
+greenRoom.Text = "Green Room"
+greenRoom.TextColor3 = Color3.fromRGB(0, 255, 0)
+greenRoom.TextScaled = true
+greenRoom.TextSize = 14.000
+greenRoom.TextWrapped = true
+greenRoom.MouseButton1Click:Connect(function()
+	tp.CFrame = CFrame.new(13.1243, 17.1221, -193.691)
+end)
+
+mainRoom.Name = "mainRoom"
+mainRoom.Parent = teleportsMain
+mainRoom.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+mainRoom.BorderColor3 = Color3.fromRGB(0, 255, 0)
+mainRoom.Position = UDim2.new(0, 0, 0.0961538479, 0)
+mainRoom.Size = UDim2.new(0, 150, 0, 25)
+mainRoom.Font = Enum.Font.PermanentMarker
+mainRoom.Text = "Main Room"
+mainRoom.TextColor3 = Color3.fromRGB(0, 255, 0)
+mainRoom.TextScaled = true
+mainRoom.TextSize = 14.000
+mainRoom.TextWrapped = true
+mainRoom.MouseButton1Click:Connect(function()
+	tp.CFrame = CFrame.new(-30.0292, 1.69384, -216.169)
+end)
+
+pinkRoom.Name = "pinkRoom"
+pinkRoom.Parent = teleportsMain
+pinkRoom.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+pinkRoom.BorderColor3 = Color3.fromRGB(0, 255, 0)
+pinkRoom.Position = UDim2.new(0, 0, 0.488867879, 0)
+pinkRoom.Size = UDim2.new(0, 150, 0, 25)
+pinkRoom.Font = Enum.Font.PermanentMarker
+pinkRoom.Text = "Pink Room"
+pinkRoom.TextColor3 = Color3.fromRGB(0, 255, 0)
+pinkRoom.TextScaled = true
+pinkRoom.TextSize = 14.000
+pinkRoom.TextWrapped = true
+pinkRoom.MouseButton1Click:Connect(function()
+	tp.CFrame = CFrame.new(12.3233, 17.1221, -225.491)
+end)
+
+basement.Name = "basement"
+basement.Parent = teleportsMain
+basement.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+basement.BorderColor3 = Color3.fromRGB(0, 255, 0)
+basement.Position = UDim2.new(0, 0, 0.617256761, 0)
+basement.Size = UDim2.new(0, 150, 0, 25)
+basement.Font = Enum.Font.PermanentMarker
+basement.Text = "Basement"
+basement.TextColor3 = Color3.fromRGB(0, 255, 0)
+basement.TextScaled = true
+basement.TextSize = 14.000
+basement.TextWrapped = true
+basement.MouseButton1Click:Connect(function()
+	tp.CFrame = CFrame.new(61.5745, -14.9591, -188.891)
+end)
+
+attic.Name = "attic"
+attic.Parent = teleportsMain
+attic.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+attic.BorderColor3 = Color3.fromRGB(0, 255, 0)
+attic.Position = UDim2.new(0, 0, 0.745863557, 0)
+attic.Size = UDim2.new(0, 150, 0, 25)
+attic.Font = Enum.Font.PermanentMarker
+attic.Text = "Attic"
+attic.TextColor3 = Color3.fromRGB(0, 255, 0)
+attic.TextScaled = true
+attic.TextSize = 14.000
+attic.TextWrapped = true
+attic.MouseButton1Click:Connect(function()
+	tp.CFrame = CFrame.new(-22.9026, 34.2159, -210.911)
+end)
+
+sewer.Name = "sewer"
+sewer.Parent = teleportsMain
+sewer.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+sewer.BorderColor3 = Color3.fromRGB(0, 255, 0)
+sewer.Position = UDim2.new(0, 0, 0.876859188, 0)
+sewer.Size = UDim2.new(0, 150, 0, 25)
+sewer.Font = Enum.Font.PermanentMarker
+sewer.Text = "Sewer"
+sewer.TextColor3 = Color3.fromRGB(0, 255, 0)
+sewer.TextScaled = true
+sewer.TextSize = 14.000
+sewer.TextWrapped = true
+sewer.MouseButton1Click:Connect(function()
+	tp.CFrame = CFrame.new(-70.3818, -287.855, -1478.1)
+end)
+
+openTP.Name = "openTP"
+openTP.Parent = teleportsTab
+openTP.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+openTP.BorderColor3 = Color3.fromRGB(0, 255, 0)
+openTP.BorderSizePixel = 2
+openTP.Position = UDim2.new(-0.166666642, 0, 0, 0)
+openTP.Size = UDim2.new(0, 25, 0, 25)
+openTP.Font = Enum.Font.PermanentMarker
+openTP.Text = "+"
+openTP.TextColor3 = Color3.fromRGB(0, 255, 0)
+openTP.TextScaled = true
+openTP.TextSize = 14.000
+openTP.TextWrapped = true
+openTP.MouseButton1Click:Connect(function()
+	if teleportsMain.Visible == false then
+		teleportsMain.Visible = true
+		openTP.Text = '-'
+	else
+		teleportsMain.Visible = false
+		openTP.Text = '+'
+	end	
+end)
+
+creditsTab.Name = "creditsTab"
+creditsTab.Parent = ScreenGui
+creditsTab.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+creditsTab.BorderColor3 = Color3.fromRGB(0, 255, 0)
+creditsTab.BorderSizePixel = 2
+creditsTab.Position = UDim2.new(0.693939388, 0, 0.0346740633, 0)
+creditsTab.Size = UDim2.new(0, 150, 0, 25)
+
+TextLabel_2.Parent = creditsTab
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(8.94069672e-08, 0, 0, 0)
+TextLabel_2.Size = UDim2.new(0, 150, 0, 25)
+TextLabel_2.Font = Enum.Font.PermanentMarker
+TextLabel_2.Text = "Credits"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 255, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+creditsMain.Name = "creditsMain"
+creditsMain.Parent = creditsTab
+creditsMain.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+creditsMain.BackgroundTransparency = 0.100
+creditsMain.BorderColor3 = Color3.fromRGB(0, 255, 0)
+creditsMain.BorderSizePixel = 2
+creditsMain.Position = UDim2.new(0, 0, 1, 0)
+creditsMain.Size = UDim2.new(0, 150, 0, 90)
+creditsMain.Visible = false
+
+TextLabel_3.Parent = creditsMain
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 255, 0)
+TextLabel_3.BorderSizePixel = 2
+TextLabel_3.Position = UDim2.new(0, 0, 0.166666687, 0)
+TextLabel_3.Size = UDim2.new(0, 150, 0, 25)
+TextLabel_3.Font = Enum.Font.PermanentMarker
+TextLabel_3.Text = "Gui made by zexcryy#0493"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 255, 0)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+TextLabel_4.Parent = creditsMain
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 255, 0)
+TextLabel_4.BorderSizePixel = 2
+TextLabel_4.Position = UDim2.new(0, 0, 0.584444404, 0)
+TextLabel_4.Size = UDim2.new(0, 150, 0, 25)
+TextLabel_4.Font = Enum.Font.PermanentMarker
+TextLabel_4.Text = "Scripted by zexcryy#0493"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 255, 0)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+openCredits.Name = "openCredits"
+openCredits.Parent = creditsTab
+openCredits.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+openCredits.BorderColor3 = Color3.fromRGB(0, 255, 0)
+openCredits.BorderSizePixel = 2
+openCredits.Position = UDim2.new(-0.166666627, 0, 0, 0)
+openCredits.Size = UDim2.new(0, 25, 0, 25)
+openCredits.Font = Enum.Font.PermanentMarker
+openCredits.Text = "+"
+openCredits.TextColor3 = Color3.fromRGB(0, 255, 0)
+openCredits.TextScaled = true
+openCredits.TextSize = 14.000
+openCredits.TextWrapped = true
+openCredits.MouseButton1Click:Connect(function()
+	if creditsMain.Visible == false then
+		creditsMain.Visible = true
+		openCredits.Text = '-'
+	else
+		creditsMain.Visible = false
+		openCredits.Text = '+'
+	end	
+end)
+
+localPlayerTab.Name = "localPlayerTab"
+localPlayerTab.Parent = ScreenGui
+localPlayerTab.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+localPlayerTab.BorderColor3 = Color3.fromRGB(0, 255, 0)
+localPlayerTab.BorderSizePixel = 2
+localPlayerTab.Position = UDim2.new(0.211999997, 0, 0.0359999985, 0)
+localPlayerTab.Size = UDim2.new(0, 150, 0, 25)
+
+TextLabel_5.Parent = localPlayerTab
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Size = UDim2.new(0, 150, 0, 25)
+TextLabel_5.Font = Enum.Font.PermanentMarker
+TextLabel_5.Text = "Local Player"
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 255, 0)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
+localPlayerMain.Name = "localPlayerMain"
+localPlayerMain.Parent = localPlayerTab
+localPlayerMain.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+localPlayerMain.BackgroundTransparency = 0.100
+localPlayerMain.BorderColor3 = Color3.fromRGB(0, 255, 0)
+localPlayerMain.BorderSizePixel = 2
+localPlayerMain.Position = UDim2.new(0, 0, 1, 0)
+localPlayerMain.Size = UDim2.new(0, 150, 0, 265)
+localPlayerMain.Visible = false
+
+submitWalkSpeed.Name = "submitWalkSpeed"
+submitWalkSpeed.Parent = localPlayerMain
+submitWalkSpeed.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+submitWalkSpeed.BorderColor3 = Color3.fromRGB(0, 255, 0)
+submitWalkSpeed.Position = UDim2.new(0, 0, 0.228534117, 0)
+submitWalkSpeed.Size = UDim2.new(0, 150, 0, 25)
+submitWalkSpeed.Font = Enum.Font.PermanentMarker
+submitWalkSpeed.Text = "Submit WalkSpeed"
+submitWalkSpeed.TextColor3 = Color3.fromRGB(0, 255, 0)
+submitWalkSpeed.TextScaled = true
+submitWalkSpeed.TextSize = 14.000
+submitWalkSpeed.TextWrapped = true
+submitWalkSpeed.MouseButton1Down:Connect(function()
+		local datatextuwuyesaaaaaaaaaaaaaaaa = tonumber(enterWalkSpeed.Text)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = datatextuwuyesaaaaaaaaaaaaaaaa
+end)
+
+submitJumpPower.Name = "submitJumpPower"
+submitJumpPower.Parent = localPlayerMain
+submitJumpPower.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+submitJumpPower.BorderColor3 = Color3.fromRGB(0, 255, 0)
+submitJumpPower.Position = UDim2.new(0, 0, 0.488867879, 0)
+submitJumpPower.Size = UDim2.new(0, 150, 0, 25)
+submitJumpPower.Font = Enum.Font.PermanentMarker
+submitJumpPower.Text = "Submit JumpPower"
+submitJumpPower.TextColor3 = Color3.fromRGB(0, 255, 0)
+submitJumpPower.TextScaled = true
+submitJumpPower.TextSize = 14.000
+submitJumpPower.TextWrapped = true
+submitJumpPower.MouseButton1Down:Connect(function()
+		local datatextuwuyesaaaaaaaaaaaaaaaaaa = tonumber(enterJumpPower.Text)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = datatextuwuyesaaaaaaaaaaaaaaaaaa
+end)
+
+infJump.Name = "infJump"
+infJump.Parent = localPlayerMain
+infJump.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+infJump.BorderColor3 = Color3.fromRGB(0, 255, 0)
+infJump.Position = UDim2.new(0, 0, 0.617256761, 0)
+infJump.Size = UDim2.new(0, 150, 0, 25)
+infJump.Font = Enum.Font.PermanentMarker
+infJump.Text = "Infinite Jump"
+infJump.TextColor3 = Color3.fromRGB(0, 255, 0)
+infJump.TextScaled = true
+infJump.TextSize = 14.000
+infJump.TextWrapped = true
+infJump.MouseButton1Click:Connect(function()
+		local Player = game:GetService'Players'.LocalPlayer;
+		local UIS = game:GetService'UserInputService';
+
+		_G.JumpHeight = 50;
+
+		function Action(Object, Function) if Object ~= nil then Function(Object); end end
+
+		UIS.InputBegan:connect(function(UserInput)
+			if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+				Action(Player.Character.Humanoid, function(self)
+					if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
+						Action(self.Parent.HumanoidRootPart, function(self)
+							self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
+						end)
+					end
+				end)
+			end
+		end)
+end)
+
+btools.Name = "btools"
+btools.Parent = localPlayerMain
+btools.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+btools.BorderColor3 = Color3.fromRGB(0, 255, 0)
+btools.Position = UDim2.new(0, 0, 0.745863557, 0)
+btools.Size = UDim2.new(0, 150, 0, 25)
+btools.Font = Enum.Font.PermanentMarker
+btools.Text = "Btools"
+btools.TextColor3 = Color3.fromRGB(0, 255, 0)
+btools.TextScaled = true
+btools.TextSize = 14.000
+btools.TextWrapped = true
+btools.MouseButton1Click:Connect(function()
+		a = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+		a.BinType = 2
+		b = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+		b.BinType = 3
+		c = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+		c.BinType = 4
+end)
+
+enterWalkSpeed.Name = "enterWalkSpeed"
+enterWalkSpeed.Parent = localPlayerMain
+enterWalkSpeed.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+enterWalkSpeed.BorderColor3 = Color3.fromRGB(0, 255, 0)
+enterWalkSpeed.BorderSizePixel = 2
+enterWalkSpeed.Position = UDim2.new(-4.06901052e-07, 0, 0.094339624, 0)
+enterWalkSpeed.Size = UDim2.new(0, 150, 0, 25)
+enterWalkSpeed.Font = Enum.Font.PermanentMarker
+enterWalkSpeed.Text = "[Enter WalkSpeed]"
+enterWalkSpeed.TextColor3 = Color3.fromRGB(0, 255, 0)
+enterWalkSpeed.TextScaled = true
+enterWalkSpeed.TextSize = 14.000
+enterWalkSpeed.TextWrapped = true
+
+enterJumpPower.Name = "enterJumpPower"
+enterJumpPower.Parent = localPlayerMain
+enterJumpPower.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+enterJumpPower.BorderColor3 = Color3.fromRGB(0, 255, 0)
+enterJumpPower.BorderSizePixel = 2
+enterJumpPower.Position = UDim2.new(-4.06901052e-07, 0, 0.358490586, 0)
+enterJumpPower.Size = UDim2.new(0, 150, 0, 25)
+enterJumpPower.Font = Enum.Font.PermanentMarker
+enterJumpPower.Text = "[Enter JumpPower]"
+enterJumpPower.TextColor3 = Color3.fromRGB(0, 255, 0)
+enterJumpPower.TextScaled = true
+enterJumpPower.TextSize = 14.000
+enterJumpPower.TextWrapped = true
+
+openLP.Name = "openLP"
+openLP.Parent = localPlayerTab
+openLP.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+openLP.BorderColor3 = Color3.fromRGB(0, 255, 0)
+openLP.BorderSizePixel = 2
+openLP.Position = UDim2.new(-0.166666672, 0, 0, 0)
+openLP.Size = UDim2.new(0, 25, 0, 25)
+openLP.Font = Enum.Font.PermanentMarker
+openLP.Text = "+"
+openLP.TextColor3 = Color3.fromRGB(0, 255, 0)
+openLP.TextScaled = true
+openLP.TextSize = 14.000
+openLP.TextWrapped = true
+openLP.MouseButton1Click:Connect(function()
+		if localPlayerMain.Visible == false then
+			localPlayerMain.Visible = true
+			openLP.Text = '-'
+		else
+			localPlayerMain.Visible = false
+			openLP.Text = '+'
+		end	
+end)
+
+itemsTab.Name = "itemsTab"
+itemsTab.Parent = ScreenGui
+itemsTab.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+itemsTab.BorderColor3 = Color3.fromRGB(0, 255, 0)
+itemsTab.BorderSizePixel = 2
+itemsTab.Position = UDim2.new(0.454545438, 0, 0.0346740633, 0)
+itemsTab.Size = UDim2.new(0, 150, 0, 25)
+
+TextLabel_6.Parent = itemsTab
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Size = UDim2.new(0, 150, 0, 25)
+TextLabel_6.Font = Enum.Font.PermanentMarker
+TextLabel_6.Text = "Items"
+TextLabel_6.TextColor3 = Color3.fromRGB(0, 255, 0)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 14.000
+TextLabel_6.TextWrapped = true
+
+itemsMain.Name = "itemsMain"
+itemsMain.Parent = itemsTab
+itemsMain.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+itemsMain.BackgroundTransparency = 0.100
+itemsMain.BorderColor3 = Color3.fromRGB(0, 255, 0)
+itemsMain.BorderSizePixel = 2
+itemsMain.Position = UDim2.new(0, 0, 1, 0)
+itemsMain.Size = UDim2.new(0, 150, 0, 160)
+itemsMain.Visible = false
+
+apple.Name = "apple"
+apple.Parent = itemsMain
+apple.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+apple.BorderColor3 = Color3.fromRGB(0, 255, 0)
+apple.Position = UDim2.new(0, 0, 0.160019964, 0)
+apple.Size = UDim2.new(0, 150, 0, 25)
+apple.Font = Enum.Font.PermanentMarker
+apple.Text = "Give Apple"
+apple.TextColor3 = Color3.fromRGB(0, 255, 0)
+apple.TextScaled = true
+apple.TextSize = 14.000
+apple.TextWrapped = true
+apple.MouseButton1Click:Connect(function()
+		local args = {[1] = "Apple"} 
+		game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(unpack(args))
+end)
+
+pizza.Name = "pizza"
+pizza.Parent = itemsMain
+pizza.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+pizza.BorderColor3 = Color3.fromRGB(0, 255, 0)
+pizza.Position = UDim2.new(0, 0, 0.378769964, 0)
+pizza.Size = UDim2.new(0, 150, 0, 25)
+pizza.Font = Enum.Font.PermanentMarker
+pizza.Text = "Give Big Pizza"
+pizza.TextColor3 = Color3.fromRGB(0, 255, 0)
+pizza.TextScaled = true
+pizza.TextSize = 14.000
+pizza.TextWrapped = true
+pizza.MouseButton1Click:Connect(function()
+		local args = {[1] = "Pizza3"} 
+		game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(unpack(args))
+end)
+
+bloxyCola.Name = "bloxyCola"
+bloxyCola.Parent = itemsMain
+bloxyCola.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+bloxyCola.BorderColor3 = Color3.fromRGB(0, 255, 0)
+bloxyCola.Position = UDim2.new(0, 0, 0.803770065, 0)
+bloxyCola.Size = UDim2.new(0, 150, 0, 25)
+bloxyCola.Font = Enum.Font.PermanentMarker
+bloxyCola.Text = "Give BloxyCola"
+bloxyCola.TextColor3 = Color3.fromRGB(0, 255, 0)
+bloxyCola.TextScaled = true
+bloxyCola.TextSize = 14.000
+bloxyCola.TextWrapped = true
+bloxyCola.MouseButton1Click:Connect(function()
+		local args = {[1] = "BloxyCola"} 
+		game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(unpack(args))
+end)
+
+cookie.Name = "cookie"
+cookie.Parent = itemsMain
+cookie.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+cookie.BorderColor3 = Color3.fromRGB(0, 255, 0)
+cookie.Position = UDim2.new(0, 0, 0.59126997, 0)
+cookie.Size = UDim2.new(0, 150, 0, 25)
+cookie.Font = Enum.Font.PermanentMarker
+cookie.Text = "Give Cookie"
+cookie.TextColor3 = Color3.fromRGB(0, 255, 0)
+cookie.TextScaled = true
+cookie.TextSize = 14.000
+cookie.TextWrapped = true
+cookie.MouseButton1Click:Connect(function()
+		local args = {[1] = "Cookie"}
+		game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(unpack(args))
+end)
+
+openItems.Name = "openItems"
+openItems.Parent = itemsTab
+openItems.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+openItems.BorderColor3 = Color3.fromRGB(0, 255, 0)
+openItems.BorderSizePixel = 2
+openItems.Position = UDim2.new(-0.166666627, 0, 3.7252903e-08, 0)
+openItems.Size = UDim2.new(0, 25, 0, 25)
+openItems.Font = Enum.Font.PermanentMarker
+openItems.Text = "+"
+openItems.TextColor3 = Color3.fromRGB(0, 255, 0)
+openItems.TextScaled = true
+openItems.TextSize = 14.000
+openItems.TextWrapped = true
+openItems.MouseButton1Click:Connect(function()
+		if itemsMain.Visible == false then
+			itemsMain.Visible = true
+			openItems.Text = '-'
+		else
+			itemsMain.Visible = false
+			openItems.Text = '+'
+		end	
+end)
+
+functionsTab.Name = "functionsTab"
+functionsTab.Parent = ScreenGui
+functionsTab.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+functionsTab.BorderColor3 = Color3.fromRGB(0, 255, 0)
+functionsTab.BorderSizePixel = 2
+functionsTab.Position = UDim2.new(0.333000004, 0, 0.0350000001, 0)
+functionsTab.Size = UDim2.new(0, 150, 0, 25)
+
+TextLabel_7.Parent = functionsTab
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(0, 0, -0.0399999619, 0)
+TextLabel_7.Size = UDim2.new(0, 150, 0, 25)
+TextLabel_7.Font = Enum.Font.PermanentMarker
+TextLabel_7.Text = "Functions"
+TextLabel_7.TextColor3 = Color3.fromRGB(0, 255, 0)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 14.000
+TextLabel_7.TextWrapped = true
+
+functionsMain.Name = "functionsMain"
+functionsMain.Parent = functionsTab
+functionsMain.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+functionsMain.BackgroundTransparency = 0.100
+functionsMain.BorderColor3 = Color3.fromRGB(0, 255, 0)
+functionsMain.BorderSizePixel = 2
+functionsMain.Position = UDim2.new(0, 0, 0.999999404, 0)
+functionsMain.Size = UDim2.new(0, 150, 0, 135)
+functionsMain.Visible = false
+
+unlockBasement.Name = "unlockBasement"
+unlockBasement.Parent = functionsMain
+unlockBasement.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+unlockBasement.BorderColor3 = Color3.fromRGB(0, 255, 0)
+unlockBasement.Position = UDim2.new(0, 0, 0.187566251, 0)
+unlockBasement.Size = UDim2.new(0, 150, 0, 25)
+unlockBasement.Font = Enum.Font.PermanentMarker
+unlockBasement.Text = "Unlock Basement"
+unlockBasement.TextColor3 = Color3.fromRGB(0, 255, 0)
+unlockBasement.TextScaled = true
+unlockBasement.TextSize = 14.000
+unlockBasement.TextWrapped = true
+unlockBasement.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").RemoteEvents.UnlockDoor:FireServer()
+end)
+
+basementLights.Name = "basementLights"
+basementLights.Parent = functionsMain
+basementLights.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+basementLights.BorderColor3 = Color3.fromRGB(0, 255, 0)
+basementLights.Position = UDim2.new(0, 0, 0.475529075, 0)
+basementLights.Size = UDim2.new(0, 150, 0, 25)
+basementLights.Font = Enum.Font.PermanentMarker
+basementLights.Text = "Basement Lights"
+basementLights.TextColor3 = Color3.fromRGB(0, 255, 0)
+basementLights.TextScaled = true
+basementLights.TextSize = 14.000
+basementLights.TextWrapped = true
+basementLights.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").RemoteEvents.BasementMission:FireServer()
+end)
+
+friendCat.Name = "friendCat"
+friendCat.Parent = functionsMain
+friendCat.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+friendCat.BorderColor3 = Color3.fromRGB(0, 255, 0)
+friendCat.Position = UDim2.new(0, 0, 0.76719588, 0)
+friendCat.Size = UDim2.new(0, 150, 0, 25)
+friendCat.Font = Enum.Font.PermanentMarker
+friendCat.Text = "Befriend the Cat"
+friendCat.TextColor3 = Color3.fromRGB(0, 255, 0)
+friendCat.TextScaled = true
+friendCat.TextSize = 14.000
+friendCat.TextWrapped = true
+friendCat.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").RemoteEvents.Cattery:FireServer()
+end)
+
+openFunctions.Name = "openFunctions"
+openFunctions.Parent = functionsTab
+openFunctions.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+openFunctions.BorderColor3 = Color3.fromRGB(0, 255, 0)
+openFunctions.BorderSizePixel = 2
+openFunctions.Position = UDim2.new(-0.166666627, 0, 0, 0)
+openFunctions.Size = UDim2.new(0, 25, 0, 25)
+openFunctions.Font = Enum.Font.PermanentMarker
+openFunctions.Text = "+"
+openFunctions.TextColor3 = Color3.fromRGB(0, 255, 0)
+openFunctions.TextScaled = true
+openFunctions.TextSize = 14.000
+openFunctions.TextWrapped = true
+openFunctions.MouseButton1Click:Connect(function()
+		if functionsMain.Visible == false then
+			functionsMain.Visible = true
+			openFunctions.Text = '-'
+		else
+			functionsMain.Visible = false
+			openFunctions.Text = '+'
+		end	
+end)
