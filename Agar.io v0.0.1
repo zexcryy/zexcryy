@@ -1,0 +1,125 @@
+
+-- Gui to Lua
+-- Version: 3.2
+-- zexcryy#0493
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local title = Instance.new("TextLabel")
+local amount = Instance.new("TextBox")
+local walkSpeed = Instance.new("TextButton")
+local orbFarm = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local deleteGears = Instance.new("TextButton")
+local credits = Instance.new("TextLabel")
+local toggle = false
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+main.BorderColor3 = Color3.fromRGB(255, 170, 255)
+main.Position = UDim2.new(0.424242437, 0, 0.277448088, 0)
+main.Size = UDim2.new(0, 250, 0, 300)
+main.Active = true
+main.Draggable = true
+
+title.Name = "title"
+title.Parent = main
+title.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+title.BorderColor3 = Color3.fromRGB(255, 170, 255)
+title.Size = UDim2.new(0, 250, 0, 50)
+title.Font = Enum.Font.Arcade
+title.Text = "Agar.io"
+title.TextColor3 = Color3.fromRGB(255, 170, 255)
+title.TextScaled = true
+title.TextSize = 14.000
+title.TextWrapped = true
+
+amount.Name = "amount"
+amount.Parent = main
+amount.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+amount.BorderColor3 = Color3.fromRGB(255, 170, 255)
+amount.Position = UDim2.new(0.100000001, 0, 0.816666663, 0)
+amount.Size = UDim2.new(0, 50, 0, 30)
+amount.Font = Enum.Font.Arcade
+amount.Text = "16"
+amount.TextColor3 = Color3.fromRGB(255, 170, 255)
+amount.TextScaled = true
+amount.TextSize = 14.000
+amount.TextWrapped = true
+
+walkSpeed.Name = "walkSpeed"
+walkSpeed.Parent = main
+walkSpeed.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+walkSpeed.BorderColor3 = Color3.fromRGB(255, 170, 255)
+walkSpeed.Position = UDim2.new(0.400000006, 0, 0.816666663, 0)
+walkSpeed.Size = UDim2.new(0, 125, 0, 30)
+walkSpeed.Font = Enum.Font.Arcade
+walkSpeed.Text = "Set WalkSpeed"
+walkSpeed.TextColor3 = Color3.fromRGB(255, 170, 255)
+walkSpeed.TextScaled = true
+walkSpeed.TextSize = 14.000
+walkSpeed.TextWrapped = true
+walkSpeed.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (amount.Text)
+end)
+orbFarm.Name = "orbFarm"
+orbFarm.Parent = main
+orbFarm.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+orbFarm.BorderColor3 = Color3.fromRGB(255, 170, 255)
+orbFarm.Position = UDim2.new(0.100000001, 0, 0.25, 0)
+orbFarm.Size = UDim2.new(0, 125, 0, 30)
+orbFarm.Font = Enum.Font.Arcade
+orbFarm.Text = "Orb Farm"
+orbFarm.TextColor3 = Color3.fromRGB(255, 170, 255)
+orbFarm.TextScaled = true
+orbFarm.TextSize = 14.000
+orbFarm.TextWrapped = true
+orbFarm.MouseButton1Click:Connect(function()
+	toggle = not toggle
+	if toggle == true then
+		while toggle == true do
+			local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+			for i, v in pairs(game:GetService("Workspace").Gems:GetChildren()) do
+				if v.Name == 'Gem' then
+					v.Position = pos
+				end
+			end
+			wait()
+		end
+	end
+end)
+
+deleteGears.Name = "deleteGears"
+deleteGears.Parent = main
+deleteGears.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+deleteGears.BorderColor3 = Color3.fromRGB(255, 170, 255)
+deleteGears.Position = UDim2.new(0.100000001, 0, 0.450000018, 0)
+deleteGears.Size = UDim2.new(0, 125, 0, 30)
+deleteGears.Font = Enum.Font.Arcade
+deleteGears.Text = "Delete Gears"
+deleteGears.TextColor3 = Color3.fromRGB(255, 170, 255)
+deleteGears.TextScaled = true
+deleteGears.TextSize = 14.000
+deleteGears.TextWrapped = true
+deleteGears.MouseButton1Click:Connect(function()
+	game:GetService("Workspace").Gears:Destroy()
+end)
+credits.Name = "credits"
+credits.Parent = main
+credits.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+credits.BorderColor3 = Color3.fromRGB(255, 170, 255)
+credits.Position = UDim2.new(0.100000001, 0, 0.586666703, 0)
+credits.Size = UDim2.new(0, 200, 0, 50)
+credits.Font = Enum.Font.SourceSans
+credits.Text = "-- credits go to zexcryy#0493 for the ugly ui, also the scripting --"
+credits.TextColor3 = Color3.fromRGB(255, 170, 255)
+credits.TextScaled = true
+credits.TextSize = 14.000
+credits.TextWrapped = true
