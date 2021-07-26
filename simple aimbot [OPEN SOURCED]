@@ -1,0 +1,40 @@
+_G.aimbot = true -- the toggle
+local camera = game:GetService('Workspace').CurrentCamera -- the current camera
+local localplayer = game:GetService('Players').LocalPlayer -- the local player
+
+function closestplayer()
+    local dist = math.huge -- the distance, math.huge means infinite pretty much
+local target = nil -- the target, nil means no values
+    for i, v in pairs(game:GetService('Players'):GetPlayers()) do -- loops through all players
+        if v ~= localplayer then -- checks if (v) is the opposite of the localplayer
+            if v.Character and v.Character:FindFirstChild('Head') and v.TeamColor ~= localplayer.TeamColor and _G.aimbot and v.Character.Humanoid.Health > 0 then -- the checks, you can edit them
+                local magnitude = (v.Character.Head.Position - localplayer.Character.Head.Position).magnitude -- gets the distance between the localplayers head and the other players head
+                if magnitude < dist then -- checks if the distance is less than infinite
+                    dist = magnitude
+                    target = v -- sets our target
+                end
+            end
+        end
+    end
+    return target
+end
+
+local settings = {keybind = Enum.UserInputType.MouseButton2} -- the keybind to use aimbot
+local aiming = false -- if the player is currently aiming
+local UIS = game:GetService('UserInputService') -- gets UserInputService
+UIS.InputBegan:Connect(function (inp) -- input began
+    if inp.UserInputType == settings.keybind then -- checks if the input began is the keybind
+        aiming = true  -- lets the script know the player is aiming
+    end
+end)
+UIS.InputEnded:Connect(function (inp) -- input ended
+    if inp.UserInputType == settings.keybind then -- checks if the input ended is the keybind
+        aiming = false -- tells the script that the player stopped aiming
+    end
+end)
+
+game:GetService('RunService').RenderStepped:Connect(function () -- gets the service RenderStepped
+    if aiming then -- checks if the player is aiming
+    camera.CFrame = CFrame.new(camera.CFrame.Position.closestplayer().Character.Head.Position) -- locks onto closest players head
+    end
+end)
